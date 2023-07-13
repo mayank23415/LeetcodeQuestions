@@ -9,9 +9,11 @@ public class solution {
             nums[i] = scan.nextInt();
         }
 
-        System.out.println(optimisedBruteForce(nums));
+        System.out.println(mostOptimised(nums));
     }
 
+    // The code below is two pointer solutions with O(1) size complexity
+    // and O(log(n) + n2) time complexity using two pointer approach
     public static List<List<Integer>> mostOptimised(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
@@ -72,6 +74,8 @@ public class solution {
         return list;
     }
 
+    // The code below is better approach than the brute force where we are using 
+    // set 
     public static List<List<Integer>> optimisedBruteForce(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         Set<Integer> checkSet = new HashSet<>();
