@@ -1,5 +1,8 @@
 import java.util.*;
 
+// In this question we have to find the area of the container which can hold the most water
+// We are given an array of heights where we have to find two such heights such that the 
+// the container formed by them contains the maximum water i.e. it has the max area.
 public class solution {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
