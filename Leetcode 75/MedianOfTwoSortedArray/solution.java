@@ -16,8 +16,8 @@ public class solution {
         scan.close();
     }
 
-    public static int bruteForce(int[] nums1, int[] nums2) {
-        int res = 0;
+    public static float bruteForce(int[] nums1, int[] nums2) {
+        float res = 0;
         int i = 0, j = 0, n = 0;
         int[] mergedArray = new int[nums1.length + nums2.length];
         while (i < nums1.length && j < nums2.length) {
@@ -41,6 +41,14 @@ public class solution {
             j++;
             n++;
         }
+
+        if (mergedArray.length % 2 == 0) {
+            res = (mergedArray[mergedArray.length / 2 - 1] + mergedArray[mergedArray.length / 2]) / 2;
+        } else {
+            res = mergedArray[mergedArray.length / 2];
+        }
         return res;
     }
+
+    
 }
